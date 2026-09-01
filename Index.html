@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuizMaster - Quiz App</title>
+
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            <span>🧠</span>
+
+            <div>
+                <h1>QuizMaster</h1>
+                <p>Test your knowledge</p>
+            </div>
+        </div>
+
+        <div class="badge">
+            🎯 Challenge Yourself
+        </div>
+
+    </header>
+
+
+    <!-- HOME SCREEN -->
+    <section id="homeScreen" class="screen active">
+
+        <div class="hero">
+
+            <div class="hero-icon">
+                🧠
+            </div>
+
+            <h2>Ready to Test Your Knowledge?</h2>
+
+            <p>
+                Choose a quiz category and challenge yourself
+                with exciting questions.
+            </p>
+
+        </div>
+
+
+        <div class="quiz-heading">
+
+            <div>
+                <span>📚</span>
+                <h2>Choose Your Quiz</h2>
+            </div>
+
+            <button id="randomQuizBtn" class="random-btn">
+                🎲 Random Quiz
+            </button>
+
+        </div>
+
+
+        <div id="quizCards" class="quiz-grid"></div>
+
+    </section>
+
+
+    <!-- QUIZ SCREEN -->
+    <section id="quizScreen" class="screen">
+
+        <div class="quiz-top">
+
+            <button id="backHomeBtn" class="back-btn">
+                ← Home
+            </button>
+
+            <div class="question-count">
+                Question
+                <strong id="currentQuestion">1</strong>
+                /
+                <strong id="totalQuestions">10</strong>
+            </div>
+
+        </div>
+
+
+        <!-- PROGRESS -->
+        <div class="progress-container">
+
+            <div
+                id="progressBar"
+                class="progress-bar">
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-category">
+                <span id="categoryBadge">Quiz</span>
+            </div>
+
+            <h2 id="questionText">
+                Question goes here?
+            </h2>
+
+
+            <div
+                id="optionsContainer"
+                class="options">
+            </div>
+
+
+            <div
+                id="feedback"
+                class="feedback">
+            </div>
+
+
+            <button
+                id="nextBtn"
+                class="next-btn"
+                disabled>
+                Submit Answer →
+            </button>
+
+        </div>
+
+
+        <div class="score-mini">
+
+            <span>🏆 Score</span>
+
+            <strong id="liveScore">
+                0
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULT SCREEN -->
+    <section id="resultScreen" class="screen">
+
+        <div class="result-card">
+
+            <div class="result-icon">
+                🏆
+            </div>
+
+            <p class="result-small">
+                QUIZ COMPLETED!
+            </p>
+
+            <h2>Great Job!</h2>
+
+            <p class="result-message">
+                Here is your final result
+            </p>
+
+
+            <div class="score-circle">
+
+                <div>
+
+                    <strong id="finalScore">
+                        0
+                    </strong>
+
+                    <span>
+                        / 10
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-stats">
+
+                <div class="stat correct">
+                    <span>✓</span>
+
+                    <div>
+                        <small>Correct</small>
+                        <strong id="correctAnswers">
+                            0
+                        </strong>
+                    </div>
+                </div>
+
+
+                <div class="stat wrong">
+                    <span>✕</span>
+
+                    <div>
+                        <small>Incorrect</small>
+                        <strong id="wrongAnswers">
+                            0
+                        </strong>
+                    </div>
+                </div>
+
+
+                <div class="stat percent">
+                    <span>%</span>
+
+                    <div>
+                        <small>Accuracy</small>
+                        <strong id="accuracy">
+                            0%
+                        </strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="result-buttons">
+
+                <button
+                    id="restartBtn"
+                    class="restart-btn">
+                    🔄 Play Again
+                </button>
+
+                <button
+                    id="homeBtn"
+                    class="home-btn">
+                    🏠 Home
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="answer-review">
+
+            <h2>📋 Answer Review</h2>
+
+            <div id="reviewList"></div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        Made with ❤️ using HTML • CSS • JavaScript
+    </footer>
+
+</div>
+
+
+<script src="Script.js"></script>
+
+</body>
+</html>
